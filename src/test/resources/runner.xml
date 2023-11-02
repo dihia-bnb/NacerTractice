@@ -2,12 +2,25 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 <suite  name="regression suite">
+    <parameter name="useCloudEnv" value="false"></parameter>
+
+    <!--  cloud parameters   -->
+    <parameter name="envName" value="browserstack"></parameter>
+    <parameter name="os" value="OS X"></parameter>
+    <parameter name="os_version" value="Big Sur"></parameter>
+    <parameter name="browser_version" value="110"></parameter>
+    <!--   local & cloud parameters  -->
     <parameter name="url" value="https://www.saucedemo.com/"></parameter>
-    <parameter name="browserName" value="chrome"></parameter>
-    <test name="login amazontest">
+    <parameter name="browserName" value="firefox"></parameter>
+
+
+
+    <test name="login saucedemotest">
         <classes>
-            <class name="saucedemotest.ValidLoginTest" ></class>
-            <class name="saucedemotest.InvalidLoginTest"></class>
+          <!--  <class name="regulareTest.ValidLoginTest" ></class>-->
+          <!--  <class name="regulareTest.InvalidLoginTest"></class>  -->
+            <class name="saucedemotest.advanced_test.UDValidTest" ></class>
+            <class name="saucedemotest.advanced_test.UDInvalidTest"></class>
         </classes>
     </test>
 </suite>

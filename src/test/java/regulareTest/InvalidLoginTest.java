@@ -1,13 +1,13 @@
-package saucedemotest;
+package regulareTest;
 
-import base.SetUp;
+import base.CommonAPI;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class InvalidLoginTest extends SetUp {
+public class InvalidLoginTest extends CommonAPI {
 
 
     @Test
@@ -15,7 +15,7 @@ public class InvalidLoginTest extends SetUp {
 
         //Validate the title
         String expectedTitle = "Swag Labs";
-        String actualTitle =driver.getTitle();
+        String actualTitle = getCurrentTitle();
         Assert.assertEquals(actualTitle,expectedTitle);
         System.out.println("navigate to saucedemo app success");
         //find web elements
@@ -49,7 +49,7 @@ public class InvalidLoginTest extends SetUp {
     public void test2(){
         //Validate the title
         String expectedTitle = "Swag Labs";
-        String actualTitle =driver.getTitle();
+        String actualTitle = getCurrentTitle();
         Assert.assertEquals(actualTitle,expectedTitle);
         System.out.println("navigate to saucedemo app success");
         //find web elements

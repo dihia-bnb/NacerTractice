@@ -1,13 +1,13 @@
-package saucedemotest;
+package regulareTest;
 
-import base.SetUp;
+import base.CommonAPI;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class ValidLoginTest extends SetUp {
+public class ValidLoginTest extends CommonAPI {
     @Test
     public  void test() {
 
